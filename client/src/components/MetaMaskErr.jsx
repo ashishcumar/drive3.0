@@ -15,7 +15,7 @@ function MetaMaskErr() {
     >
       <Grid
         sx={{
-          width: "500px",
+          width: "350px",
           background: "white",
           borderRadius: "12px",
           padding: "24px",
@@ -33,15 +33,14 @@ function MetaMaskErr() {
           }}
         />
         <Flex sx={{ justifyContent: "center", gap: "8px" }}>
-          <Text sx={{ fontSize: "18px", textAlign: "center" }}>Error:-</Text>
           <Text sx={{ fontSize: "18px", textAlign: "center" }}>
-            MetaMask Extension Not Detected
+            Error:- MetaMask Extension Not Detected
           </Text>
         </Flex>
-        <Text sx={{ fontSize: "14px", textAlign: "center",margin:"8px 0" }}>
+        <Text sx={{ fontSize: "14px", textAlign: "center", margin: "8px 0" }}>
           {" "}
-          *We could not detect the MetaMask extension in your browser. To use our
-          Web3 application, please ensure that MetaMask is installed and
+          *We could not detect the MetaMask extension in your browser. To use
+          our Web3 application, please ensure that MetaMask is installed and
           enabled.
         </Text>
       </Grid>
