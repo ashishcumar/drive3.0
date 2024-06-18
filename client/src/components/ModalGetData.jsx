@@ -118,7 +118,9 @@ function ModalGetData({ setRadioBtnValue, radioBtnValue, contract, account }) {
                         width: "100%",
                         objectFit: "contain",
                         margin: "12px 0",
+                        cursor: "pointer",
                       }}
+                      onClick={() => window.open(src, "_blank")}
                     />
                   );
                 })}
@@ -134,7 +136,9 @@ function ModalGetData({ setRadioBtnValue, radioBtnValue, contract, account }) {
                         width: "100%",
                         objectFit: "contain",
                         margin: "12px 0",
+                        cursor:'pointer'
                       }}
+                      onClick={() => window.open(src, "_blank")}
                     />
                   );
                 })}

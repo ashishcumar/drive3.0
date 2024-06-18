@@ -3,15 +3,7 @@ import { ethers } from "ethers";
 import Upload from "./artifacts/contracts/Upload.sol/Upload.json";
 import "./App.css";
 import useShowToast from "./customHooks/useShowToast";
-import {
-  Box,
-  Button,
-  Flex,
-  Grid,
-  Image,
-  Input,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, Grid, Image, Input, Text } from "@chakra-ui/react";
 import FileUpload from "./components/FileUpload";
 import bgImage from "./assets/bgImage.png";
 import {
@@ -47,7 +39,7 @@ function App() {
         const signer = await provider.getSigner();
         const address = await signer.getAddress();
         setAccount(address);
-        const contractAddress = "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0";
+        const contractAddress = "0x70A40446159d8eb788e1e3781Fb744777D249888";
         const contract = new ethers.Contract(
           contractAddress,
           Upload.abi,
@@ -208,7 +200,6 @@ function App() {
                     color: "white",
                     "&:hover": { background: "rgba(48,42,95,1)" },
                     padding: "8px 28px",
-                
                   }}
                   onClick={removeAccess}
                 >
@@ -245,6 +236,7 @@ function App() {
       >
         <Button
           sx={{
+            fontSize: ["14px", "16px"],
             background: "white",
             color: "rgba(48,42,95,1)",
           }}
@@ -255,6 +247,7 @@ function App() {
         <Button
           sx={{
             background: "white",
+            fontSize: ["14px", "16px"],
             color: "rgba(48,42,95,1)",
           }}
           onClick={() => setModalOpenFor("removeAccess")}
@@ -265,6 +258,7 @@ function App() {
           variant={"solid"}
           sx={{
             background: "white",
+            fontSize: ["14px", "16px"],
             color: "rgba(48,42,95,1)",
           }}
           onClick={() => setModalOpenFor("getImages")}
@@ -274,7 +268,7 @@ function App() {
       </Flex>
       <Box
         sx={{
-          height: ["400px", "500px"],
+          minHeight: ["400px", "500px"],
           width: ["350px", "700px"],
           display: "grid",
           justifyContent: "center",
@@ -286,16 +280,52 @@ function App() {
           boxShadow: ["", "-36px 36px 0px 4px rgba(48,42,95,0.4)"],
         }}
       >
-        <Text
-          sx={{
-            fontSize: ["24px", "44px"],
-            fontWeight: "bold",
-            margin: ["12px 0", "24px 0"],
-            textAlign: "center",
-          }}
-        >
-          Select your file
-        </Text>
+        <Box sx={{ marginBottom: ["12px", ""] }}>
+          <Text
+            sx={{
+              fontSize: ["24px", "44px"],
+              fontWeight: "bold",
+              margin: ["12px 0 0 0 ", "24px 0 0 0"],
+              textAlign: "center",
+            }}
+          >
+            Select your file
+          </Text>
+          <Flex
+            sx={{
+              gap: "12px",
+              alignItems: "center",
+              justifyContent: "center",
+              flexWrap: "wrap",
+            }}
+          >
+            <Text sx={{ fontSize: ["14px", "18px"], fontWeight: "bold" }}>
+              {" "}
+              Connected Account :-{" "}
+            </Text>
+            <Text
+              sx={{
+                fontSize: "18px",
+                fontWeight: "bold",
+                display: ["none", "block"],
+              }}
+            >
+              {" "}
+              {account?.slice(0, 10) + "....." + account?.slice(-10)}{" "}
+            </Text>
+            <Text
+              sx={{
+                fontSize: "14px",
+                fontWeight: "bold",
+                display: ["block", "none"],
+              }}
+            >
+              {" "}
+              {account?.slice(0, 4) + "....." + account?.slice(-4)}{" "}
+            </Text>
+          </Flex>
+        </Box>
+
         <Box
           sx={{
             border: "1px dashed black",
@@ -318,7 +348,7 @@ function App() {
           }}
         >
           *You can upload images ("JPEG", "PNG", "JPG"), with a maximum size of
-          2MB.
+          4MB.
         </Text>
       </Box>
     </Grid>
