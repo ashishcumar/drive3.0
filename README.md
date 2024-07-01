@@ -1,14 +1,30 @@
-# Sample Hardhat Project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+# Drive3-0: A Full-Stack Web3 DApp
 
-Try running some of the following tasks:
+## Introduction
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
-```
-# drive3.0
+🚀 Welcome to Drive3-0, a decentralized application (DApp) built on blockchain technology. This project combines smart contracts, decentralized storage, and user-friendly interfaces to create a unique Web3 experience.
+
+* **Solidity**: Smart Contracts
+* **Ethereum**: Sepolia testnet
+* **React Vite**: Frontend Development
+
+## Features
+
+* **Decentralized Storage**: Upload images to Pinata IPFS
+* **Access Management**: Manage access with MetaMask - grant/revoke permissions
+
+## Live Demo
+
+📸 Url :- https://drive3-0.web.app/
+
+![Product Page](client/src/assets/readme/landingSection.png)
+
+## Tech Stack
+
+* **Solidity**: Smart Contracts
+* **Ethereum**: Sepolia testnet
+* **React Vite**: Frontend Development
+* **Pinata IPFS**: Decentralized Storage
+* **MetaMask**: Access Management
+* **Firebase**: Deployment
