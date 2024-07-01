@@ -20,6 +20,8 @@
 
 ![Product Page](client/src/assets/readme/landingSection.png)
 
+![Image Grid](client/src/assets/readme/imageGrid.png)
+
 ## Tech Stack
 
 * **Solidity**: Smart Contracts
